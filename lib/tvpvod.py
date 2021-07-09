@@ -1,11 +1,11 @@
 import sys
 from urllib.parse import parse_qsl
 from urllib.parse import urlencode
-import json
 
 import xbmc
 import xbmcgui
 import xbmcplugin
+
 from lib import util
 
 BASE_URL = "http://www.api.v3.tvp.pl/shared/listing.php?parent_id=%d&count=%d&page=%d&dump=json"
@@ -71,7 +71,7 @@ def open_folder(folder_id, page=1):
 
             # TODO: jeśli "object_type": "video" ustawić link na video
             # TODO: sprawdzić czy to coś zmienia "paymethod": 0
-            # TODO: jeśli ojekt nie ma "title" nie wywalać błędu
+            # TODO: jeśli objekt nie ma "title" nie wywalać błędu
 
             title = "None"
             if "title" in item:
@@ -79,6 +79,10 @@ def open_folder(folder_id, page=1):
 
             is_folder = True
             action = "openFolder"
+
+            if "object_type" in item and item["object_type"] == "directory_standard":
+                continue
+
             if "object_type" in item and item["object_type"] == "video":
                 is_folder = False
                 action = "openVideo"
@@ -97,7 +101,7 @@ def open_folder(folder_id, page=1):
 def add_dir(name, url_params, icon_image=None, thumbnail=None, folder=False):
     item = xbmcgui.ListItem(name)
     url = PLUGIN_URL + '?' + urlencode(url_params)
-    dit = xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=item, isFolder=folder)
+    dir = xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=item, isFolder=folder)
     return dir
 
 
