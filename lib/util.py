@@ -1,7 +1,7 @@
-import http.client
 import json
 import urllib.parse
 import urllib.request
+
 import xbmc
 
 
@@ -27,7 +27,7 @@ def get_url_content(url):
         response_code = response.code
 
     xbmc.log("[info] get_url code: " + str(response_code), level=xbmc.LOGINFO)
-    xbmc.log("[info] get_url data: " + str(response_content), level=xbmc.LOGINFO)
+#    xbmc.log("[info] get_url data: " + str(response_content), level=xbmc.LOGINFO)
 
     try:
         response_json = json.loads(response_content)

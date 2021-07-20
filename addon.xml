@@ -10,14 +10,15 @@
         <platform>all</platform>
 		<language>pl</language>
 		<license>Apache2</license>
-        <forum></forum>
-		<source></source>
-        <website></website>
+        <forum>https://github.com/czosnkowy666/plugin.video.kodi-polska-tvp/issues</forum>
+		<source>https://github.com/czosnkowy666/plugin.video.kodi-polska-tvp</source>
+        <website>https://github.com/czosnkowy666/plugin.video.kodi-polska-tvp/wiki</website>
         <summary lang="en_GB">Watch videos on demand from the TVP.</summary>
         <description lang="en_GB">Watch videos on demand from the TVP.</description>
-        <summary lang="pl_PL">Oglądaj materiały widoe z TVP</summary>
-        <description lang="pl_PL">Oglądaj materiały widoe z TVP.</description>
-        <disclaimer lang="de_DE">Ten dodatek nie jest obsługiwany przez żadnego nadawcę i dlatego jest nieoficjalny.</disclaimer>
+        <disclaimer lang="en_GB">This add-on is not supported by any broadcaster and is therefore unofficial.</disclaimer>
+        <summary lang="pl_PL">Oglądaj materiały wideo z TVP.</summary>
+        <description lang="pl_PL">Oglądaj materiały wideo z TVP.</description>
+        <disclaimer lang="pl_PL">Ten dodatek nie jest obsługiwany przez żadnego nadawcę i dlatego jest nieoficjalny.</disclaimer>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
